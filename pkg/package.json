@@ -1,0 +1,28 @@
+{
+  "name": "@holochain/serialization",
+  "collaborators": [
+    "Holochain Foundation"
+  ],
+  "description": "A Rust Wasm binding for JavaScript of the Holochain serialization & hashing function",
+  "version": "0.1.0",
+  "license": "CAL-1.0",
+  "repository": {
+    "type": "git",
+    "url": "To be filled"
+  },
+  "files": [
+    "holochain_serialization_js_bg.wasm",
+    "holochain_serialization_js.js",
+    "holochain_serialization_js_bg.js",
+    "holochain_serialization_js.d.ts"
+  ],
+  "type": "module",
+  "module": "holochain_serialization_js.js",
+  "types": "holochain_serialization_js.d.ts",
+  "sideEffects": false,
+  "keywords": [
+    "holochain",
+    "serialization",
+    "hash"
+  ]
+}
