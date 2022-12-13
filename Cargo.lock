@@ -1680,7 +1680,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aa14c35079167a5e3f8a33f32c43ab080d33dfd495d99c2f4075441b2e7faa91"
 dependencies = [
  "futures",
- "one_err 0.0.7",
+ "one_err",
  "rmp-serde 1.1.1",
  "rmpv",
  "serde",
@@ -1828,7 +1828,7 @@ dependencies = [
  "num_cpus",
  "observability",
  "once_cell",
- "one_err 0.0.7",
+ "one_err",
  "parking_lot 0.10.2",
  "predicates",
  "rand 0.8.5",
@@ -1899,7 +1899,6 @@ dependencies = [
  "derive_more",
  "directories",
  "holo_hash",
- "holochain_keystore",
  "holochain_p2p",
  "holochain_serialized_bytes",
  "holochain_state",
@@ -1923,7 +1922,6 @@ dependencies = [
  "holo_hash",
  "holochain_serialized_bytes",
  "kitsune_p2p_timestamp",
- "paste",
  "serde",
  "serde_bytes",
  "subtle",
@@ -1944,7 +1942,7 @@ dependencies = [
  "lair_keystore",
  "must_future",
  "nanoid 0.4.0",
- "one_err 0.0.7",
+ "one_err",
  "parking_lot 0.11.2",
  "serde",
  "serde_bytes",
@@ -2042,7 +2040,6 @@ dependencies = [
  "fallible-iterator",
  "fixt",
  "futures",
- "getrandom 0.2.8",
  "holo_hash",
  "holochain_serialized_bytes",
  "holochain_util",
@@ -2090,7 +2087,6 @@ dependencies = [
  "either",
  "fallible-iterator",
  "futures",
- "getrandom 0.2.8",
  "holo_hash",
  "holochain_keystore",
  "holochain_p2p",
@@ -2102,9 +2098,8 @@ dependencies = [
  "kitsune_p2p",
  "mockall",
  "nanoid 0.3.0",
- "one_err 0.0.7",
+ "one_err",
  "parking_lot 0.10.2",
- "rand 0.8.5",
  "serde",
  "serde_json",
  "shrinkwraprs",
@@ -2157,7 +2152,6 @@ dependencies = [
  "must_future",
  "nanoid 0.3.0",
  "observability",
- "one_err 0.0.5",
  "parking_lot 0.10.2",
  "rand 0.8.5",
  "regex",
@@ -3530,18 +3524,6 @@ name = "once_cell"
 version = "1.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "86f0b0d4bf799edbc74508c1e8bf170ff5f41238e5f8225603ca7caaae2b7860"
-
-[[package]]
-name = "one_err"
-version = "0.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "42901c1956c1ef1de5bce4428695aa03505a8e27bd2262173395c804834f44ec"
-dependencies = [
- "indexmap",
- "libc",
- "serde",
- "serde_json",
-]
 
 [[package]]
 name = "one_err"
@@ -5044,7 +5026,7 @@ dependencies = [
  "libsodium-sys-stable",
  "num_cpus",
  "once_cell",
- "one_err 0.0.7",
+ "one_err",
  "parking_lot 0.12.1",
  "tokio",
 ]

@@ -12,12 +12,14 @@ fn set_panic_hook() {
 }
 
 #[wasm_bindgen(js_name = "hashZomeCall")]
-pub fn hash_zome_call(value: JsValue) -> Result<Vec<u8>, wasm_bindgen::JsError> {
+pub fn hash_zome_call(_value: JsValue) -> Result<Vec<u8>, wasm_bindgen::JsError> {
     set_panic_hook();
-    let unsigned_zome_call: ZomeCallUnsigned = serde_wasm_bindgen::from_value(value)?;
-    let serialized_zome_call =
-        holochain_zome_types::encode(&unsigned_zome_call).map_err(wasm_bindgen::JsError::from)?;
-    let zome_call_hash = holo_hash::encode::blake2b_256(&serialized_zome_call);
-    let signature = unsigned_zome_call.provenance.;
-    Ok(zome_call_hash)
+    // let unsigned_zome_call: ZomeCallUnsigned = serde_wasm_bindgen::from_value(value)?;
+    // let serialized_zome_call =
+    //     holochain_zome_types::encode(&unsigned_zome_call).map_err(wasm_bindgen::JsError::from)?;
+    // let zome_call_hash = holo_hash::encode::blake2b_256(&serialized_zome_call);
+    // let signature = unsigned_zome_call.provenance.;
+    // Ok(zome_call_hash)
+    
+    Ok(vec![1,1,1])
 }

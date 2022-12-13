@@ -3,18 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "test.js",
+  "main": "dist/holochain_serialization_bg.js",
+  "types": "pkg/holochain_serialization_bg.d.ts",
   "scripts": {
     "test": "node --experimental-wasm-modules node.js",
-    "build": "npm run build:wasm && npm run build:wasm-bindgen",
+    "build": "rimraf dist pkg && npm run build:wasm && npm run build:wasm-bindgen && rollup -c rollup.config.js",
     "build:wasm": "cargo build --lib --release --target wasm32-unknown-unknown",
     "build:wasm-bindgen": "wasm-bindgen --out-dir pkg target/wasm32-unknown-unknown/release/holochain_serialization_js.wasm"
   },
-  "keywords": [
-    "holochain",
-    "serialization",
-    "client"
-  ],
+  "keywords": ["holochain", "serialization", "client"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
