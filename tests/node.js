@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import msgpack from "@msgpack/msgpack";
 import test from "node:test";
 import { deepEqual } from "node:assert/strict";
-import { hashZomeCall } from "./pkg/holochain_serialization_js.js";
+import { hashZomeCall } from "../dist/index.js";
 
 const zeroHash36Byte = [];
 for (let i = 0; i < 36; i++) {
@@ -14,7 +14,7 @@ const DNA_HASH = new Uint8Array([132, 45, 36].concat(...zeroHash36Byte));
 const CAP_SECRET = new Uint8Array(64);
 const NONCE = new Uint8Array(32);
 
-test("serialize unsigned zome call without payload", () => {
+test("serialize unsigned zome call without payload", async () => {
   const unsignedZomeCallPayload = {
     provenance: AGENT_PUB_KEY,
     cell_id: [DNA_HASH, AGENT_PUB_KEY],
@@ -26,7 +26,7 @@ test("serialize unsigned zome call without payload", () => {
     expires_at: 0,
   };
 
-  const zomeCallHash = hashZomeCall(unsignedZomeCallPayload);
+  const zomeCallHash = await hashZomeCall(unsignedZomeCallPayload);
 
   deepEqual(
     zomeCallHash,
@@ -37,7 +37,7 @@ test("serialize unsigned zome call without payload", () => {
   );
 });
 
-test("serialize unsigned zome call with string as payload", () => {
+test("serialize unsigned zome call with string as payload", async () => {
   const unsignedZomeCallPayload = {
     provenance: AGENT_PUB_KEY,
     cell_id: [DNA_HASH, AGENT_PUB_KEY],
@@ -49,7 +49,7 @@ test("serialize unsigned zome call with string as payload", () => {
     expires_at: 0,
   };
 
-  const zomeCallHash = hashZomeCall(unsignedZomeCallPayload);
+  const zomeCallHash = await hashZomeCall(unsignedZomeCallPayload);
 
   deepEqual(
     zomeCallHash,

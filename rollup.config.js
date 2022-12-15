@@ -1,15 +1,13 @@
-import { wasm } from "@rollup/plugin-wasm";
-import replace from "@rollup/plugin-replace";
+import typescript from "@rollup/plugin-typescript";
+import rust from "@wasm-tool/rollup-plugin-rust";
 
 export default {
-  input: "pkg/holochain_serialization_js_bg.js",
+  input: "index.ts",
   output: [{ dir: "dist", format: "es" }],
   plugins: [
-    replace({ "import * as wasm": "import wasm", delimiters: ["", ""] }),
-    wasm({
-      maxFileSize: 10000000,
-      targetEnv: "auto-inline",
-      sync: ["pkg/holochain_serialization_js_bg.wasm"],
+    rust({
+      inlineWasm: true,
     }),
+    typescript({}),
   ],
 };

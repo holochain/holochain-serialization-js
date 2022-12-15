@@ -3,21 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/holochain_serialization_bg.js",
-  "types": "pkg/holochain_serialization_bg.d.ts",
+  "main": "dist/index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "test": "node --experimental-wasm-modules node.js",
-    "build": "rimraf dist pkg && npm run build:wasm && npm run build:wasm-bindgen && rollup -c rollup.config.js",
-    "build:wasm": "cargo build --lib --release --target wasm32-unknown-unknown",
-    "build:wasm-bindgen": "wasm-bindgen --out-dir pkg target/wasm32-unknown-unknown/release/holochain_serialization_js.wasm"
+    "test": "node --experimental-wasm-modules tests/node.js && npm run test:browser",
+    "test:browser": "wtr \"tests/browser.js\" --node-resolve",
+    "build": "rollup -c rollup.config.js"
   },
   "keywords": ["holochain", "serialization", "client"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
     "@msgpack/msgpack": "^2.8.0",
+    "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
+    "@wasm-tool/rollup-plugin-rust": "^2.3.2",
+    "@web/test-runner": "^0.15.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -26,6 +29,6 @@
     "prettier": "^2.8.0",
     "tape": "^5.6.1",
     "ts-node": "^10.9.1",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.4"
   }
 }

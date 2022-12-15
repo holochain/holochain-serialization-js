@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
-* @param {any} _value
+* @param {any} value
 * @returns {Uint8Array}
 */
-export function hashZomeCall(_value: any): Uint8Array;
+export function hashZomeCall(value: any): Uint8Array;
