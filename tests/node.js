@@ -1,4 +1,3 @@
-import crypto from "node:crypto";
 import msgpack from "@msgpack/msgpack";
 import test from "node:test";
 import { deepEqual } from "node:assert/strict";

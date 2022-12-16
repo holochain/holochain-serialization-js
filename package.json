@@ -6,12 +6,17 @@
   "main": "dist/index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "node --experimental-wasm-modules tests/node.js && npm run test:browser",
+    "test:node": "node tests/node.js",
     "test:browser": "wtr \"tests/browser.js\" --node-resolve",
+    "test": "npm run test:node && npm run test:browser",
     "build": "rollup -c rollup.config.js"
   },
-  "keywords": ["holochain", "serialization", "client"],
-  "author": "",
+  "keywords": [
+    "holochain",
+    "serialization",
+    "client"
+  ],
+  "author": "Holochain Foundation",
   "license": "ISC",
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",
