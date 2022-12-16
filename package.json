@@ -1,5 +1,5 @@
 {
-  "name": "holochain-serialization",
+  "name": "@holochain/serialization",
   "version": "0.1.0-beta-rc.0",
   "description": "A JavaScript Wasm binding of the Holochain serialization and hashing algorithm (JaWaHoSeHa)",
   "author": "Holochain Foundation",
@@ -10,6 +10,7 @@
     "client"
   ],
   "type": "module",
+  "files": ["dist"],
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
