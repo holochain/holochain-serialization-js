@@ -2005,7 +2005,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "holochain_serialization_js"
+name = "holochain_serialization_wasm_js"
 version = "0.1.0"
 dependencies = [
  "arbitrary",

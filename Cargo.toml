@@ -4,8 +4,8 @@ description = "A JavaScript Wasm binding of the Holochain serialization and hash
 edition = "2021"
 keywords = ["holochain", "serialization"]
 license = "CAL-1.0"
-name = "holochain_serialization_js"
-repository = "To be filled"
+name = "holochain_serialization_wasm_js"
+repository = "https://github.com/holochain/holochain-serialization-js"
 version = "0.1.0"
 
 [lib]
@@ -15,17 +15,17 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-console_error_panic_hook = { version = "0.1.6", optional = true }
-getrandom = { version = "0.2", features = ["js"] }
-holo_hash = { version = "0.1.0-beta-rc.0", features = ["encoding"] }
-holochain_zome_types = { version = "0.1.0-beta-rc.0", default-features = false }
-serde = { version = "1.0", features = ["derive"] }
+console_error_panic_hook = {version = "0.1.6", optional = true}
+getrandom = {version = "0.2", features = ["js"]}
+holo_hash = {version = "0.1.0-beta-rc.0", features = ["encoding"]}
+holochain_zome_types = {version = "0.1.0-beta-rc.0", default-features = false}
+serde = {version = "1.0", features = ["derive"]}
 serde-wasm-bindgen = "0.4"
-tokio = { version = "1", features = ["rt", "sync"] }
+tokio = {version = "1", features = ["rt", "sync"]}
 wasm-bindgen = "0.2"
-web-sys = { version = "0.3", features = ["console"] }
+web-sys = {version = "0.3", features = ["console"]}
 
 [dev-dependencies]
-arbitrary = { version = "1.0", features = ["derive"] }
-holochain = { version = "0.1.0-beta-rc.0" }
+arbitrary = {version = "1.0", features = ["derive"]}
+holochain = {version = "0.1.0-beta-rc.0"}
 wasm-bindgen-test = "0.3"
