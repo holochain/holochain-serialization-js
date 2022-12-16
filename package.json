@@ -3,21 +3,22 @@
   "version": "1.0.0",
   "description": "A JavaScript Wasm binding of the Holochain serialization and hashing algorithm (JaWaHoSeHa)",
   "author": "Holochain Foundation",
-  "license": "ISC",
+  "license": "CAL-1.0",
+  "keywords": [
+    "holochain",
+    "serialization",
+    "client"
+  ],
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
     "test:node": "node tests/node.js",
     "test:browser": "wtr \"tests/browser.js\" --node-resolve",
     "test": "npm run test:node && npm run test:browser",
     "build": "rimraf dist && rollup -c rollup.config.js"
   },
-  "keywords": [
-    "holochain",
-    "serialization",
-    "client"
-  ],
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@msgpack/msgpack": "^2.8.0",
