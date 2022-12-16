@@ -1,3 +1,4 @@
+use holochain_zome_types::ZomeCallUnsigned;
 use wasm_bindgen::prelude::*;
 
 fn set_panic_hook() {
@@ -18,6 +19,5 @@ pub fn hash_zome_call(value: JsValue) -> Result<Vec<u8>, wasm_bindgen::JsError> 
     let serialized_zome_call =
         holochain_zome_types::encode(&unsigned_zome_call).map_err(wasm_bindgen::JsError::from)?;
     let zome_call_hash = holo_hash::encode::blake2b_256(&serialized_zome_call);
-    let signature = unsigned_zome_call.provenance.;
     Ok(zome_call_hash)
 }
