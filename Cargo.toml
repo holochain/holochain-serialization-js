@@ -6,7 +6,7 @@ keywords = ["holochain", "serialization"]
 license = "CAL-1.0"
 name = "holochain_serialization_wasm_js"
 repository = "https://github.com/holochain/holochain-serialization-js"
-version = "0.1.0"
+version = "0.1.0-beta-rc.0"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
