@@ -1,10 +1,10 @@
 {
   "name": "holochain-serialization",
   "version": "1.0.0",
-  "description": "",
+  "description": "A JavaScript Wasm binding of the Holochain serialization and hashing algorithm (JaWaHoSeHa)",
   "type": "module",
   "main": "dist/index.js",
-  "types": "index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test:node": "node tests/node.js",
     "test:browser": "wtr \"tests/browser.js\" --node-resolve",
