@@ -2006,7 +2006,7 @@ dependencies = [
 
 [[package]]
 name = "holochain_serialization_wasm_js"
-version = "0.1.0"
+version = "0.1.0-beta-rc.0"
 dependencies = [
  "arbitrary",
  "console_error_panic_hook",
