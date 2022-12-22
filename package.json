@@ -1,6 +1,6 @@
 {
   "name": "@holochain/serialization",
-  "version": "0.1.0-beta-rc.2",
+  "version": "0.1.0-beta-rc.3",
   "description": "A JavaScript Wasm binding of the Holochain serialization and hashing algorithm (JaWaHoSeHa)",
   "author": "Holochain Foundation",
   "license": "CAL-1.0",
