@@ -17,6 +17,7 @@ export default {
     replace({
       [match]: "",
       delimiters: ["", ""],
+      preventAssignment: true,
     }),
   ],
 };

@@ -20,9 +20,9 @@ getrandom = {version = "0.2", features = ["js"]}
 holo_hash = {version = "0.1.0-beta-rc.0", features = ["encoding"]}
 holochain_zome_types = {version = "0.1.0-beta-rc.0", default-features = false}
 serde = {version = "1.0", features = ["derive"]}
-serde-wasm-bindgen = "0.4"
+serde-wasm-bindgen = "0.3"
 tokio = {version = "1", features = ["rt", "sync"]}
-wasm-bindgen = "0.2"
+wasm-bindgen = "0.2.83"
 web-sys = {version = "0.3", features = ["console"]}
 
 [dev-dependencies]
